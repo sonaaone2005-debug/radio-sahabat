@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Sahabat Selamanya</title>
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: transparent; font-family: Arial, sans-serif; }
+.radio-area { width: 100%; max-width: 1100px; margin: auto; padding: 35px 10px 22px; }
+.handle { width: 35%; height: 30px; margin: 0 auto -8px; border: 9px solid #252525; border-bottom: none; border-radius: 25px 25px 0 0; background: transparent; }
+.radio { position: relative; width: 100%; display: flex; align-items: center; gap: 12px; padding: 22px 16px 30px; background: linear-gradient(145deg,#454545 0%,#222222 35%,#101010 100%); border: 7px solid #080808; border-radius: 28px; box-shadow: inset 3px 3px 0 #686868,inset -4px -5px 0 #050505,0 12px 0 #090909,0 19px 24px #0004; }
+.speaker { width: 16%; aspect-ratio: 1; flex-shrink: 0; border: 7px solid #090909; border-radius: 50%; background: repeating-radial-gradient(circle,#252525 0px,#252525 4px,#111 5px,#111 8px); box-shadow: 0 0 0 4px #555,inset 0 0 18px #000; display: flex; align-items: center; justify-content: center; }
+.speaker-inner { width: 40%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle,#555,#202020 60%,#080808); border: 3px solid #111; }
+.center { flex: 1; min-width: 0; }
+.screen { width: 100%; aspect-ratio: 16 / 9; padding: 5px; border: 6px solid #080808; border-radius: 13px; background: #444; box-shadow: 0 0 0 3px #777,inset 0 0 10px #000; overflow: hidden; }
+.screen iframe { display: block; width: 100%; height: 100%; border: 0; border-radius: 4px; background: #000; }
+.controls { position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%); display: flex; align-items: center; gap: 13px; }
+.knob { width: 16px; height: 16px; border-radius: 50%; border: 3px solid #111; background: linear-gradient(135deg,#DDD,#777); box-shadow: 0 2px 0 #000; }
+.button { width: 22px; height: 10px; border: 2px solid #080808; border-radius: 3px; background: #999; }
+.power { width: 8px; height: 8px; border-radius: 50%; background: #7CFF9B; box-shadow: 0 0 7px #7CFF9B; }
+.feet { display: flex; justify-content: space-between; padding: 0 9%; margin-top: 11px; }
+.foot { width: 13%; height: 12px; background: #111; border-radius: 0 0 7px 7px; }
+.antenna { position: absolute; right: 9%; top: -37px; width: 5px; height: 40px; background: linear-gradient(90deg,#777,#EEE,#666); transform: rotate(22deg); transform-origin: bottom; border-radius: 4px; }
+.antenna::before { content: ""; position: absolute; top: -5px; left: -3px; width: 11px; height: 11px; border-radius: 50%; background: #BBB; }
+@media(max-width:600px) {
+  .radio-area { padding: 25px 5px 15px; }
+  .radio { gap: 6px; padding: 12px 8px 22px; border-width: 4px; border-radius: 16px; }
+  .speaker { border-width: 3px; box-shadow: 0 0 0 2px #555; }
+  .screen { padding: 2px; border-width: 3px; border-radius: 7px; }
+  .controls { gap: 7px; bottom: 4px; }
+  .knob { width: 10px; height: 10px; border-width: 2px; }
+  .button { width: 14px; height: 7px; }
+  .power { width: 6px; height: 6px; }
+  .handle { height: 20px; border-width: 6px; }
+  .antenna { height: 28px; top: -25px; }
+  .foot { height: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="radio-area">
+  <div class="handle"></div>
+  <div class="radio">
+    <div class="antenna"></div>
+    <div class="speaker"><div class="speaker-inner"></div></div>
+    <div class="center"><div class="screen">
+      <iframe src="https://www.youtube.com/embed/uvDahpHAdfo?rel=0" title="Sahabat Selamanya" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div></div>
+    <div class="speaker"><div class="speaker-inner"></div></div>
+    <div class="controls"><div class="knob"></div><div class="button"></div><div class="button"></div><div class="button"></div><div class="knob"></div><div class="power"></div></div>
+  </div>
+  <div class="feet"><div class="foot"></div><div class="foot"></div></div>
+</div>
+</body>
+</html>
